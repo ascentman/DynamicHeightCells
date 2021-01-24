@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="tPg-ax-Aoa" customClass="Cell" customModule="DynamicHeightCells" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="144" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pz9-Ef-avz">
+                <rect key="frame" x="0.0" y="0.0" width="144" height="225"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zem-sR-RlD">
+                        <rect key="frame" x="0.0" y="0.0" width="144" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Zem-sR-RlD" secondAttribute="height" multiplier="1.5" id="tlH-km-x25"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bj6-KK-ijO" userLabel="Price Stack View">
+                        <rect key="frame" x="0.0" y="112" width="60" height="19.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gqn-gf-hC1" userLabel="New Price Stack View">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="19.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="$7.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4LE-Jv-dHc">
+                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="ea" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IML-41-RuQ" userLabel="ea">
+                                        <rect key="frame" x="44.5" y="0.0" width="15.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="My amazing amazing amazing amazing amazing multiline product" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvM-HH-ZiH">
+                        <rect key="frame" x="0.0" y="139.5" width="144" height="85.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="CvM-HH-ZiH" firstAttribute="leading" secondItem="Pz9-Ef-avz" secondAttribute="leading" id="1Hi-xV-Fg4"/>
+                    <constraint firstItem="CvM-HH-ZiH" firstAttribute="trailing" secondItem="Zem-sR-RlD" secondAttribute="trailing" id="6KT-fD-cLO"/>
+                    <constraint firstItem="CvM-HH-ZiH" firstAttribute="top" secondItem="Bj6-KK-ijO" secondAttribute="bottom" constant="8" id="JDb-xr-Oaz"/>
+                    <constraint firstItem="Zem-sR-RlD" firstAttribute="leading" secondItem="Pz9-Ef-avz" secondAttribute="leading" id="PKt-R0-u6G"/>
+                    <constraint firstAttribute="trailing" secondItem="CvM-HH-ZiH" secondAttribute="trailing" id="QKw-aj-TZF"/>
+                    <constraint firstItem="CvM-HH-ZiH" firstAttribute="leading" secondItem="Zem-sR-RlD" secondAttribute="leading" id="S3m-ea-0QN"/>
+                    <constraint firstItem="Bj6-KK-ijO" firstAttribute="leading" secondItem="Pz9-Ef-avz" secondAttribute="leading" id="jew-Gt-AJi"/>
+                    <constraint firstAttribute="bottom" secondItem="CvM-HH-ZiH" secondAttribute="bottom" id="kv5-hX-8ta"/>
+                    <constraint firstItem="Bj6-KK-ijO" firstAttribute="top" secondItem="Zem-sR-RlD" secondAttribute="bottom" constant="16" id="r2J-Uh-Drz"/>
+                    <constraint firstAttribute="trailing" secondItem="Zem-sR-RlD" secondAttribute="trailing" id="uBW-Ki-MdM"/>
+                    <constraint firstItem="Zem-sR-RlD" firstAttribute="top" secondItem="Pz9-Ef-avz" secondAttribute="top" id="xyh-3U-Bxd"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="144" height="290"/>
+            <connections>
+                <outlet property="actualPriceLabel" destination="4LE-Jv-dHc" id="2Tf-G6-r1H"/>
+                <outlet property="actualPriceType" destination="IML-41-RuQ" id="M77-Ot-JWQ"/>
+                <outlet property="imageView" destination="Zem-sR-RlD" id="HAs-ip-PaS"/>
+                <outlet property="titleLabel" destination="CvM-HH-ZiH" id="Krs-2B-OhH"/>
+            </connections>
+            <point key="canvasLocation" x="17.39130434782609" y="206.58482142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>
